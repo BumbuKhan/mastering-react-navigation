@@ -24,7 +24,7 @@ export default class HomeScreen extends Component {
                 <Button
                     title="+1"
                     color="white"
-                    onPress={params.increaseCount}
+                    onPress={() => {params.increaseCount()}}
                 />
             )
         }
