@@ -6,9 +6,9 @@ export default class DetailScreen extends Component {
         title: 'Detail'
     };*/
 
-    static navigationOptions = (props) => {
+    static navigationOptions = ({navigation}) => {
         return {
-            title: props.navigation.state.params.title
+            title: navigation.state.params.title
         }
     };
 
@@ -20,6 +20,12 @@ export default class DetailScreen extends Component {
                 alignItems: 'center'
             }}>
                 <Text>Detail screen received param: {this.props.navigation.state.params.foo}</Text>
+                <Button
+                    title="Update the title to 'Internal title'"
+                    onPress={() => {this.props.navigation.setParams({
+                        title: 'Internal title'
+                    })}}
+                />
             </View>
         );
     }
