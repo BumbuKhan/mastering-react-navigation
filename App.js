@@ -13,7 +13,17 @@ const RootStack = StackNavigator({
         screen: DetailSceen
     }
 }, {
-    initialRouteName: 'Home'
+    initialRouteName: 'Home',
+    navigationOptions: {
+        headerTintColor: 'white',
+        headerStyle: {
+            backgroundColor: '#c00'
+        },
+        headerTitleStyle: {
+            fontWeight: 'bold',
+            fontSize: 20
+        }
+    }
 });
 
 export default class App extends Component {
