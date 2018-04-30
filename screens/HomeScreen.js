@@ -16,7 +16,7 @@ export default class HomeScreen extends Component {
                 <Text>Home screen</Text>
                 <Button
                     title="Go to detail screen"
-                    onPress={() => this.props.navigation.navigate('Detail', {foo: 'bar'})}
+                    onPress={() => this.props.navigation.navigate('Detail', {foo: 'bar', title: 'Cutsom Title'})}
                 />
             </View>
         );
