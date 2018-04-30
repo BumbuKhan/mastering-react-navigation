@@ -3,7 +3,14 @@ import {View, Text, Button} from 'react-native';
 
 export default class HomeScreen extends Component {
     static navigationOptions = {
-        title: 'Home'
+        title: 'Home',
+        headerStyle: {
+            backgroundColor: 'red'
+        },
+        headerTitleStyle: {
+            fontSize: 20
+        },
+        headerTintColor: 'white'
     };
 
     render() {
