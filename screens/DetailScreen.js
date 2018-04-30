@@ -6,9 +6,33 @@ export default class DetailScreen extends Component {
         title: 'Detail'
     };*/
 
-    static navigationOptions = ({navigation}) => {
+    static navigationOptions = ({navigation, navigationOptions}) => {
+
+        /*
+        navigationOptions looks like this:
+        
+        {
+          "headerStyle": Object {
+            "backgroundColor": "#c00",
+          },
+          "headerTintColor": "white",
+          "headerTitleStyle": Object {
+            "fontSize": 20,
+            "fontWeight": "bold",
+          },
+        }
+
+        */
+
         return {
-            title: navigation.state.params.title
+            title: navigation.state.params.title,
+            headerStyle: {
+                backgroundColor: navigationOptions.headerTintColor
+            },
+            headerTitleStyle: {
+                color: navigationOptions.headerStyle.backgroundColor
+            },
+            headerTintColor: navigationOptions.headerStyle.backgroundColor
         }
     };
 
