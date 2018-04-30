@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {View, Text, Button} from 'react-native';
 
+import HeaderTitle from '../components/HeaderTitle';
+
 export default class DetailScreen extends Component {
     /*static navigationOptions = {
         title: 'Detail'
@@ -10,7 +12,7 @@ export default class DetailScreen extends Component {
 
         /*
         navigationOptions looks like this:
-        
+
         {
           "headerStyle": Object {
             "backgroundColor": "#c00",
@@ -32,7 +34,8 @@ export default class DetailScreen extends Component {
             headerTitleStyle: {
                 color: navigationOptions.headerStyle.backgroundColor
             },
-            headerTintColor: navigationOptions.headerStyle.backgroundColor
+            headerTintColor: navigationOptions.headerStyle.backgroundColor,
+            headerTitle: <HeaderTitle />
         }
     };
 
