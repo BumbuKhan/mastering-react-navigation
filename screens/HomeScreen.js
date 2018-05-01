@@ -60,6 +60,10 @@ export default class HomeScreen extends Component {
                     title="Go to detail screen"
                     onPress={() => this.props.navigation.navigate('Detail', {foo: 'bar', title: 'Cutsom Title'})}
                 />
+                <Button
+                    title="Open Modal"
+                    onPress={() => this.props.navigation.navigate('MyModal')}
+                />
             </View>
         );
     }
